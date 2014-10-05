@@ -1,0 +1,91 @@
+// ****************************************************
+// *                                                  *
+// *  apartment.cpp                                   *
+// *                                                  *
+// *  Implementation for a class holding information  *
+// *    about an apartment in a building              * 
+// *                                                  *
+// *  Based on code by Jason Zych,                    *
+// *  Legendary CS 225 Lecturer                       *
+// *                                                  *
+// ****************************************************
+
+#include "apartment.h"
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+// Apartment
+//    - constructor
+//    - initializes object to be a default apartment (i.e.
+//        an empty name and a number of 0)
+Apartment::Apartment()
+{
+   // Your Code Goes Here
+}
+
+// Apartment
+//    - constructor
+//    - parameters : paramTenant - reference to a String holding the
+//                     name of the person who resides in this apartment; 
+//                     the String cannot be changed through the reference
+//                 : paramNumber - the number of this; this 
+//                     value is assumed to be non-negative
+//    - initializes apartment to have the parameter tenant and
+//          number
+Apartment::Apartment(string const & paramTenant, int paramNumber)
+{
+   // Your Code Goes Here
+}
+
+// getTenant
+//    - return value : a reference to a String holding tenant's
+//                        name; the String cannot be changed through
+//                        this reference
+//    - returns name of person who resides in this apartment
+string const & Apartment::getTenant() const
+{
+   // Your Code Goes Here (Replace this line and the line below)
+   return *(new string());
+}
+
+// setTenant
+//    - sets the tenants name of this apartment
+void Apartment::setTenant(string const & newTenant)
+{
+   // Your Code Goes Here
+}
+
+// evictTenant
+//    - return value : a string holding the previous tenant's name
+//    - sets the tenant's name to the default value
+string Apartment::evictTenant()
+{
+   // Your Code Goes Here (Replace this line and the line below)
+   return "";
+}
+
+// getNumber
+//    - return value : an integer storing a number
+//    - returns the number of this apartment
+int Apartment::getNumber() const
+{
+   // Your Code Goes Here (Replace this line and the line below)
+   return 0;
+}
+
+// setNumber
+//    - sets the number of this apartment
+void Apartment::setNumber(int newNumber)
+{
+   // Your Code Goes Here
+}
+
+// printInfo
+//   - Prints the apartment number and tenant name
+void Apartment::printInfo() const
+{
+   // Your Code Goes Here
+}
+

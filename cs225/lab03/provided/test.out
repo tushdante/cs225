@@ -1,0 +1,159 @@
+*****Printing building created from int constructor with no assigned apartments apartments.
+Building Info:
+Number of possible apartments: 4
+
+End Info
+
+*****Adding apartments...
+*****Printing full building with added apartments
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #241
+Bob
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Adding extra apartment (building already full)
+Could not add additional apartment.  Building Full
+
+*****Removing apartment at index 1
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Creating a copy of the building
+*Copy's contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Adding apartment to copy
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Removing apartment at index 2 from copy
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Adding one last apartment to the original
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #621
+Fred
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+Done!!

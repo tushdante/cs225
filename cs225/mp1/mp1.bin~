@@ -1,0 +1,69 @@
+; This program was created using machine code with the purpose of changing
+; lower-case ASCII characters to upper-case characters and storing them in 
+; memory. The source and destination addresses are given at locations 
+; x4000 and x4002 respectively, as well as the length of the string at location
+; x4001. This code checks the value of the character by comparing determining
+; if it is less than #97 or greater than #122, if it meets this criterea then 
+; the value remains intact and gets stored. The bits contain the value 
+; between or equal to  #97 and #122 represent lowercase characters, these 
+; characters need to be decreased by #32 to transform the characters to its 
+; uppercase counterparts, this new value is then stored at a specific 
+; location in memory.
+;
+; Register Table:
+; R0 is used initially to obtain the value x4000, then it holds the address
+;    of each source character.
+; R1 is used to hold the number of characters left in the source string 
+;    (counter).
+; R2 is used to hold the address of the destination character.
+; R3 is used to store a character.
+; R4 is used to hold numbers from calculations from the ADD functions.
+; R5 is used to store the value #-97
+; R6 is used to store the value #-122.
+; R7 used to store the value #-32. 
+
+
+
+0011 0000 0000 0000	; start code at x3000
+
+; initialize registers R0,R5,R6 and R7 from memory to hold a value
+0010 000 0 0001 0010	; x3000 R0<-M[x3013]	(x4000 stored in R0)
+0010 101 0 0001 0010	; x3001 R5<-M[x3014] 	(#-97 stored in R5)
+0010 110 0 0001 0010	; x3002 R6<-M[x3015]	(#-122 stored in R6)
+0010 111 0 0001 0010	; x3003 R7<-M[x3016]	(#-32 stored in R7)
+
+; load registers R1,R2, and R0 with string information
+0110 001 000 000001	; x3004 R1<-M[R0+1]	(R1 <- num. of char. in string)
+0110 010 000 000010	; x3005 R2<-M[R0+2]	(R2 <- address of dest. char.)
+0110 000 000 000000	; x3006 R0<-M[R0+0]	(R0 <- address of source char.)
+
+; start loop
+; load register R3 with letter
+0110 011 000 000000	; x3007 R3<-M[R0+0]	(R3 <- letter)
+
+; test ASCII character
+0001 100 011 0 00 101	; x3008 R4<-R3+R5	(R4 <- ASCII value + #-92)
+0000 100 0 0000 0011	; x3009 BRn x300D	(branch to store ASCII value) 
+0001 100 011 0 00 110	; x300A R4<-R3+R6	(R4 <- ASCII value + #-122)
+0000 001 0 0000 0001	; x300B BRp x300D      	(branch to store ASCII value)
+0001 011 011 0 00 111	; x300C R3<-R3+R7	(capitalize letter)
+0111 011 010 000000	; x300D M[R2+0]<-R3	(store ASCII value)
+
+; increment registers R2,R0 and decrement register R1
+0001 010 010 1 00001	; x300E R2<-R2+1	(incr. address of dest. char.)
+0001 000 000 1 00001	; x300F R0<-R0+1	(incr. address of source char.)
+0001 001 001 1 11111	; x3010 R1<-R1-1	(decr. counter)
+0000 001 1 1111 0101	; x3011 BRp x3007      	(loop when R1 is positive)
+
+; end loop
+
+; end program
+1111 0000 0010 0101	; x3012 END PROGRAM	(terminates program)
+
+; data needed by program
+0100 0000 0000 0000	; x3013         	(value x4000)
+11111111 10011111	; x3014          	(value #-97)
+11111111 10000110	; x3015         	(value #-122)
+11111111 11100000	; x3016          	(value #-32)
+00000000 00000000	; x3017
+00000000 00000000	; x3018

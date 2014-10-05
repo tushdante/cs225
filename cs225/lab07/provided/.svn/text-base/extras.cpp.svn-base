@@ -1,0 +1,42 @@
+
+// height()
+template <typename T>
+int BinaryTree<T>::height() const
+{
+	return height(root);
+}
+
+// height() recursive helper function
+template <typename T>
+int BinaryTree<T>::height(Node * subRoot) const
+{
+	return -2; //Stub: Your code here
+}
+
+
+
+// mirror()
+template <typename T>
+void BinaryTree<T>::mirror()
+{
+	// Your code here
+}
+
+
+
+// isOrdered()
+template <typename T>
+bool BinaryTree<T>::isOrdered() const
+{
+	return false; // Stub: Your code here
+}
+
+
+
+// printPathSums()
+template <typename T>
+void BinaryTree<T>::printPaths() const
+{
+	// Your code here
+}
+

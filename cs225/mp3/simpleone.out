@@ -1,0 +1,38 @@
+Warning: Creating empty List.
+Warning: Creating empty List.
+Warning: Creating empty List.
+Warning: Creating empty List.
+Warning: Entered List::clear().
+printing values for appendList:
+list: < 1 2 3 4 5 6 7 8 9 10 11 12 >
+size is:12
+list2: < empty list >
+size is:0
+Warning: Creating empty List.
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+Warning: Entered List::clear().
+printing values for splitList:
+< 1 2 3 4 5 >
+< 6 7 8 9 10 11 12 >
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+printing values for mixList:
+< 1 6 2 7 3 8 4 9 5 10 11 12 >
+size is:12
+< empty list >
+size is:0
+printing values for mixList 2:
+< 6 1 7 2 8 3 9 4 10 5 11 12 >
+size is:12
+< empty list >
+size is:0
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+Warning: Entered List::clear().

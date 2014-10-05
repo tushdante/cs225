@@ -1,0 +1,1355 @@
+101,100,43|
+100,99,42|
+96,95,38|
+97,96,39|
+100,99,42|
+97,96,39|
+98,97,40|
+98,97,40|
+100,99,42|
+98,97,40|
+97,96,39|
+96,95,38|
+97,96,39|
+98,97,40|
+96,95,38|
+97,96,39|
+98,97,41|
+101,101,40|
+99,98,41|
+98,97,38|
+97,97,37|
+101,101,41|
+101,101,41|
+98,98,38|
+98,97,40|
+99,100,41|
+98,96,40|
+97,98,38|
+98,98,38|
+100,100,40|
+97,97,37|
+98,98,38|
+99,98,41|
+96,95,38|
+97,96,39|
+94,93,36|
+98,97,40|
+96,95,38|
+94,93,36|
+98,97,40|
+97,96,39|
+96,95,38|
+96,95,38|
+98,97,40|
+99,98,41|
+96,95,38|
+94,93,36|
+96,95,38|
+96,95,39|
+99,98,39|
+96,95,38|
+98,97,37|
+98,97,37|
+97,97,37|
+97,96,37|
+96,96,36|
+96,95,39|
+98,96,37|
+98,97,40|
+98,97,38|
+99,98,39|
+100,100,40|
+96,95,35|
+96,96,36|
+
+
+---------current x and y----------
+x=0, y=0, 
+x=0, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=0, y=0, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=0, y=0, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+nw
+x=0, y=0, x_mid=-1, y_mid=-1, pixels=1,test_dimensions=0
+97,96,39!!
+nw+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=1, y=0, 
+x=1, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=1, y=0, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=1, y=0, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+nw
+x=1, y=0, x_mid=-1, y_mid=-1, pixels=1,test_dimensions=0
+97,96,39!!
+nw+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=2, y=0, 
+x=2, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=2, y=0, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=2, y=0, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=2, y=0, x_mid=3, y_mid=-1, pixels=1,test_dimensions=0
+98,97,40!!
+ne+
+98,97,40*
+se+
+98,97,40*
+nw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=0, 
+x=3, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=3, y=0, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=3, y=0, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=3, y=0, x_mid=3, y_mid=-1, pixels=1,test_dimensions=0
+98,97,40!!
+ne+
+98,97,40*
+se+
+98,97,40*
+nw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=0, 
+x=4, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=4, y=0, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=4, y=0, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=4, y=0, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=5, y=0, 
+x=5, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=5, y=0, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=5, y=0, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=5, y=0, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=6, y=0, 
+x=6, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=6, y=0, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=6, y=0, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=6, y=0, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=7, y=0, 
+x=7, y=0, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=7, y=0, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=7, y=0, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=7, y=0, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=0, y=1, 
+x=0, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=0, y=1, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=0, y=1, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+nw
+x=0, y=1, x_mid=-1, y_mid=-1, pixels=1,test_dimensions=0
+97,96,39!!
+nw+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=1, y=1, 
+x=1, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=1, y=1, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=1, y=1, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+nw
+x=1, y=1, x_mid=-1, y_mid=-1, pixels=1,test_dimensions=0
+97,96,39!!
+nw+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=2, y=1, 
+x=2, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=2, y=1, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=2, y=1, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=2, y=1, x_mid=3, y_mid=-1, pixels=1,test_dimensions=0
+98,97,40!!
+ne+
+98,97,40*
+se+
+98,97,40*
+nw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=1, 
+x=3, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=3, y=1, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=3, y=1, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=3, y=1, x_mid=3, y_mid=-1, pixels=1,test_dimensions=0
+98,97,40!!
+ne+
+98,97,40*
+se+
+98,97,40*
+nw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=1, 
+x=4, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=4, y=1, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=4, y=1, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=4, y=1, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=5, y=1, 
+x=5, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=5, y=1, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=5, y=1, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=5, y=1, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=6, y=1, 
+x=6, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=6, y=1, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=6, y=1, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=6, y=1, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=7, y=1, 
+x=7, y=1, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=7, y=1, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=7, y=1, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+ne
+x=7, y=1, x_mid=-5, y_mid=-1, pixels=1,test_dimensions=0
+99,100,41!!
+ne+
+99,100,41*
+sw+
+99,100,41*
+ne+
+99,100,41*
+-----------saved colors-----------
+99,100,41**
+
+
+---------current x and y----------
+x=0, y=2, 
+x=0, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=0, y=2, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=0, y=2, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+sw
+x=0, y=2, x_mid=-1, y_mid=3, pixels=1,test_dimensions=0
+96,95,38!!
+sw+
+96,95,38*
+se+
+96,95,38*
+nw+
+96,95,38*
+-----------saved colors-----------
+96,95,38**
+
+
+---------current x and y----------
+x=1, y=2, 
+x=1, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=1, y=2, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=1, y=2, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+sw
+x=1, y=2, x_mid=-1, y_mid=3, pixels=1,test_dimensions=0
+96,95,38!!
+sw+
+96,95,38*
+se+
+96,95,38*
+nw+
+96,95,38*
+-----------saved colors-----------
+96,95,38**
+
+
+---------current x and y----------
+x=2, y=2, 
+x=2, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=2, y=2, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=2, y=2, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+se
+x=2, y=2, x_mid=3, y_mid=3, pixels=1,test_dimensions=0
+97,96,39!!
+se+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=3, y=2, 
+x=3, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=3, y=2, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=3, y=2, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+se
+x=3, y=2, x_mid=3, y_mid=3, pixels=1,test_dimensions=0
+97,96,39!!
+se+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=4, y=2, 
+x=4, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=4, y=2, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=4, y=2, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=4, y=2, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=5, y=2, 
+x=5, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=5, y=2, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=5, y=2, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=5, y=2, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=6, y=2, 
+x=6, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=6, y=2, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=6, y=2, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=6, y=2, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=7, y=2, 
+x=7, y=2, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=7, y=2, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=7, y=2, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=7, y=2, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=0, y=3, 
+x=0, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=0, y=3, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=0, y=3, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+sw
+x=0, y=3, x_mid=-1, y_mid=3, pixels=1,test_dimensions=0
+96,95,38!!
+sw+
+96,95,38*
+se+
+96,95,38*
+nw+
+96,95,38*
+-----------saved colors-----------
+96,95,38**
+
+
+---------current x and y----------
+x=1, y=3, 
+x=1, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=1, y=3, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=1, y=3, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+sw
+x=1, y=3, x_mid=-1, y_mid=3, pixels=1,test_dimensions=0
+96,95,38!!
+sw+
+96,95,38*
+se+
+96,95,38*
+nw+
+96,95,38*
+-----------saved colors-----------
+96,95,38**
+
+
+---------current x and y----------
+x=2, y=3, 
+x=2, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=2, y=3, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=2, y=3, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+se
+x=2, y=3, x_mid=3, y_mid=3, pixels=1,test_dimensions=0
+97,96,39!!
+se+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=3, y=3, 
+x=3, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+nw
+x=3, y=3, x_mid=0, y_mid=0, pixels=4,test_dimensions=2
+se
+x=3, y=3, x_mid=2, y_mid=2, pixels=2,test_dimensions=1
+se
+x=3, y=3, x_mid=3, y_mid=3, pixels=1,test_dimensions=0
+97,96,39!!
+se+
+97,96,39*
+se+
+97,96,39*
+nw+
+97,96,39*
+-----------saved colors-----------
+97,96,39**
+
+
+---------current x and y----------
+x=4, y=3, 
+x=4, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=4, y=3, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=4, y=3, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=4, y=3, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=5, y=3, 
+x=5, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=5, y=3, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=5, y=3, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=5, y=3, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=6, y=3, 
+x=6, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=6, y=3, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=6, y=3, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=6, y=3, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=7, y=3, 
+x=7, y=3, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+ne
+x=7, y=3, x_mid=8, y_mid=0, pixels=4,test_dimensions=2
+sw
+x=7, y=3, x_mid=-6, y_mid=2, pixels=2,test_dimensions=1
+se
+x=7, y=3, x_mid=-5, y_mid=3, pixels=1,test_dimensions=0
+97,98,38!!
+se+
+97,98,38*
+sw+
+97,98,38*
+ne+
+97,98,38*
+-----------saved colors-----------
+97,98,38**
+
+
+---------current x and y----------
+x=0, y=4, 
+x=0, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=0, y=4, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=0, y=4, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=0, y=4, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=1, y=4, 
+x=1, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=1, y=4, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=1, y=4, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=1, y=4, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=2, y=4, 
+x=2, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=2, y=4, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=2, y=4, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=2, y=4, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=4, 
+x=3, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=3, y=4, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=3, y=4, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=3, y=4, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=4, 
+x=4, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=4, y=4, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=4, y=4, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=4, y=4, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=5, y=4, 
+x=5, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=5, y=4, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=5, y=4, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=5, y=4, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=6, y=4, 
+x=6, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=6, y=4, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=6, y=4, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=6, y=4, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=7, y=4, 
+x=7, y=4, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=7, y=4, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=7, y=4, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=7, y=4, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=0, y=5, 
+x=0, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=0, y=5, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=0, y=5, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=0, y=5, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=1, y=5, 
+x=1, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=1, y=5, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=1, y=5, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=1, y=5, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=2, y=5, 
+x=2, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=2, y=5, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=2, y=5, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=2, y=5, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=5, 
+x=3, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=3, y=5, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=3, y=5, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=3, y=5, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=5, 
+x=4, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=4, y=5, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=4, y=5, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=4, y=5, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=5, y=5, 
+x=5, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=5, y=5, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=5, y=5, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=5, y=5, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=6, y=5, 
+x=6, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=6, y=5, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=6, y=5, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=6, y=5, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=7, y=5, 
+x=7, y=5, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=7, y=5, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=7, y=5, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=7, y=5, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=0, y=6, 
+x=0, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=0, y=6, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=0, y=6, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=0, y=6, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=1, y=6, 
+x=1, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=1, y=6, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=1, y=6, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=1, y=6, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=2, y=6, 
+x=2, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=2, y=6, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=2, y=6, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=2, y=6, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=6, 
+x=3, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=3, y=6, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=3, y=6, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=3, y=6, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=6, 
+x=4, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=4, y=6, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=4, y=6, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=4, y=6, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=5, y=6, 
+x=5, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=5, y=6, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=5, y=6, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=5, y=6, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=6, y=6, 
+x=6, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=6, y=6, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=6, y=6, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=6, y=6, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=7, y=6, 
+x=7, y=6, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=7, y=6, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=7, y=6, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=7, y=6, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=0, y=7, 
+x=0, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=0, y=7, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=0, y=7, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=0, y=7, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=1, y=7, 
+x=1, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=1, y=7, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=1, y=7, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+sw
+x=1, y=7, x_mid=-1, y_mid=-5, pixels=1,test_dimensions=0
+94,93,36!!
+sw+
+94,93,36*
+ne+
+94,93,36*
+sw+
+94,93,36*
+-----------saved colors-----------
+94,93,36**
+
+
+---------current x and y----------
+x=2, y=7, 
+x=2, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=2, y=7, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=2, y=7, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=2, y=7, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=3, y=7, 
+x=3, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+sw
+x=3, y=7, x_mid=0, y_mid=8, pixels=4,test_dimensions=2
+ne
+x=3, y=7, x_mid=2, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=3, y=7, x_mid=3, y_mid=-5, pixels=1,test_dimensions=0
+98,97,40!!
+se+
+98,97,40*
+ne+
+98,97,40*
+sw+
+98,97,40*
+-----------saved colors-----------
+98,97,40**
+
+
+---------current x and y----------
+x=4, y=7, 
+x=4, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=4, y=7, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=4, y=7, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=4, y=7, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=5, y=7, 
+x=5, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=5, y=7, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=5, y=7, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=5, y=7, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=6, y=7, 
+x=6, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=6, y=7, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=6, y=7, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=6, y=7, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+---------current x and y----------
+x=7, y=7, 
+x=7, y=7, x_mid=4, y_mid=4, pixels=8,test_dimensions=4
+se
+x=7, y=7, x_mid=8, y_mid=8, pixels=4,test_dimensions=2
+nw
+x=7, y=7, x_mid=-6, y_mid=-6, pixels=2,test_dimensions=1
+se
+x=7, y=7, x_mid=-5, y_mid=-5, pixels=1,test_dimensions=0
+98,97,37!!
+se+
+98,97,37*
+nw+
+98,97,37*
+se+
+98,97,37*
+-----------saved colors-----------
+98,97,37**
+
+
+101,100,43
+100,99,42||100,99,42||97,96,39||98,97,41||101,101,40||97,97,37||101,101,41||96,95,38
+97,96,39||98,97,40||98,97,40||99,98,41||98,97,38||101,101,41||98,98,38||100,99,42
+98,97,40||97,96,39||98,97,40||98,97,40||99,100,41||98,98,38||100,100,40||97,96,39
+96,95,38||96,95,38||97,96,39||98,96,40||97,98,38||97,97,37||98,98,38||99,98,41
+96,95,38||98,97,40||96,95,38||96,95,39||99,98,39||98,97,37||97,97,37||97,96,39
+94,93,36||94,93,36||98,97,40||96,95,38||98,97,37||97,96,37||96,96,36||97,96,39
+96,95,38||99,98,41||96,95,38||96,95,39||98,96,37||99,98,39||100,100,40||96,95,38
+98,97,40||94,93,36||96,95,38||98,97,40||98,97,38||96,95,35||96,96,36||

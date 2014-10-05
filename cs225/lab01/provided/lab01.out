@@ -1,0 +1,17 @@
+*** No-argument Constructor [Basic] ...
+Apartment #-1
+Vacant
+
+*** Two-Argument Constructor [Complex] ...
+Apartment #2124
+Casper Malktose
+
+*** Print tenants for each Apartment ...
+Basic: 
+Complex: Casper Malktose
+
+*** Print numbers for each Apartment ...
+Basic: -1
+Complex: 2124
+
+Done!

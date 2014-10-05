@@ -1,0 +1,10 @@
+image.cpp
+image.h
+scene.cpp
+scene.h
+EasyBMP.cpp
+EasyBMP.h
+EasyBMP_BMP.h
+EasyBMP_DataStructures.h
+EasyBMP_VariousBMPutilities.h
+Makefile

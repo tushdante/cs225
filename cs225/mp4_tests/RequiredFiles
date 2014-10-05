@@ -1,0 +1,8 @@
+stack.cpp
+queue.cpp
+solidColorPicker.cpp
+solidColorPicker.h
+gradientColorPicker.cpp
+gradientColorPicker.h
+fills.h
+fills.cpp

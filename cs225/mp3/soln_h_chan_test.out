@@ -1,0 +1,71 @@
+Warning: Creating empty List.
+Warning: Creating empty List.
+Warning: Creating empty List.
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+testing append <> to <1,2,3>
+this:< 1 2 3 >
+endList:< empty list >
+testing append <1,2,3> to <>
+this:< 1 2 3 >
+endList:< empty list >
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+testing append <> to <>
+this:< empty list >
+endList:< empty list >
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+testing mix <1,2,3,4,5> with <6,7,8>
+this:< 1 6 2 7 3 8 4 5 >
+secList:< empty list >
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+testing mix <1,2,3> with <4,5,6,7,8>
+this:< 1 4 2 5 3 6 7 8 >
+secList:< empty list >
+testing mix <> with <1,2,3>
+Warning: Entered List::clear().
+this:< 1 2 3 >
+secList:< empty list >
+testing mix <1,2,3> with <>
+Warning: Entered List::clear().
+this:< 1 2 3 >
+secList:< empty list >
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+testing mix <> with <>
+this:< empty list >
+secList:< empty list >
+Warning: Entered List::clear().
+testing splitList with <1,2,3> and rank=5
+Warning: Creating empty List.
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+Warning: Entered List::clear().
+this:< 1 2 3 >
+returned list:< empty list >
+testing splitList with <1,2,3> and rank = 3
+Warning: Creating empty List.
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+Warning: Entered List::clear().
+this:< 1 2 >
+returned list:< 3 >
+Warning: Entered List::clear().
+testing splitList with <1,2,3> and rank = 1
+Warning: Creating empty List.
+Warning: Entered List::operator=().
+Warning: Entered List::clear().
+Warning: Entered List::copy().
+Warning: Entered List::clear().
+this:< empty list >
+returned list:< 1 2 3 >
+Warning: Entered List::clear().
+Warning: Entered List::clear().
+Warning: Entered List::clear().
