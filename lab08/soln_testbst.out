@@ -1,0 +1,142 @@
+			TESTING INSERTIONS
+
+TESTING PERFECT BST (INTEGERS):
+Your tree:
+      4          
+    /   \        
+  2       6      
+ / \     / \     
+1   3   5   7    
+
+TESTING NON-PERFECT BST (INTEGERS):
+Your tree:
+                              6                                  
+                      /               \                          
+              2                               7                  
+          /       \                                              
+      1               5                                          
+                    /                                            
+                  3                                              
+                   \                                             
+                    4                                            
+
+TESTING NON-PERFECT BST (CHARACTERS):
+Your tree:
+              C                  
+          /       \              
+      B               G          
+    /               /            
+  A               E              
+                 / \             
+                D   F            
+
+==================================================
+
+			TESTING FINDS
+
+TESTING NON-PERFECT BST (INTEGERS):
+Looking for: 1.		Found: 1
+Looking for: 2.		Found: 2
+Looking for: 3.		Found: 3
+Looking for: 4.		Found: 4
+Looking for: 5.		Found: 5
+Looking for: 6.		Found: 6
+Looking for: 7.		Found: 7
+Find was...CORRECT!
+
+TESTING NON-PERFECT BST (CHARACTERS):
+Looking for: A.		Found: A
+Looking for: B.		Found: B
+Looking for: C.		Found: C
+Looking for: D.		Found: D
+Looking for: E.		Found: E
+Looking for: F.		Found: F
+Looking for: G.		Found: G
+Find was...CORRECT!
+==================================================
+
+			TESTING REMOVALS
+
+TESTING NON-PERFECT BST (INTEGERS):
+Before removals:
+                              6                                  
+                      /               \                          
+              2                               7                  
+          /       \                                              
+      1               5                                          
+                    /                                            
+                  3                                              
+                   \                                             
+                    4                                            
+Remove no child (1)
+Your tree:
+                              6                                  
+                      /               \                          
+              2                               7                  
+                  \                                              
+                      5                                          
+                    /                                            
+                  3                                              
+                   \                                             
+                    4                                            
+
+Remove one child (5)
+Your tree:
+              6                  
+          /       \              
+      2               7          
+        \                        
+          3                      
+           \                     
+            4                    
+
+Remove two child (6)
+Your tree:
+      4          
+    /   \        
+  2       7      
+   \             
+    3            
+
+TESTING NON-PERFECT BST (CHARACTERS):
+Before removals:
+              C                  
+          /       \              
+      B               G          
+    /               /            
+  A               E              
+                 / \             
+                D   F            
+Applying several removals...
+Your tree:
+      C          
+        \        
+          D      
+           \     
+            F    
+==================================================
+
+			TESTING KEY SORT
+
+TESTING NON-PERFECT BST (INTEGERS):
+Your vector:
+6 2 4 5 3 1 7 
+Key Sort was...CORRECT!
+
+TESTING NON-PERFECT BST (CHARACTERS):
+Your vector:
+C B A G E F D 
+Key Sort was...CORRECT!
+==================================================
+
+			TESTING LEVEL ORDER
+
+TESTING NON-PERFECT BST (INTEGERS):
+Your vector:
+1 2 7 6 3 4 5 
+Level Order was...CORRECT!
+
+TESTING NON-PERFECT BST (CHARACTERS):
+Your vector:
+A B D C E G F 
+Level Order was...CORRECT!

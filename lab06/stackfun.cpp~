@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+
+
+// sum
+// adds all the elements in a stack
+template <typename T>
+T StackFun::sum(stack<T> & s)
+{
+	if (s.empty()) return T();
+	
+	T currentValue = s.top();
+	s.pop();
+	
+	currentValue = ((StackFun::sum(s)) + currentValue); 
+    
+    s.push(currentValue);
+    
+    return currentValue;
+    
+    
+    
+}
+
+// scramble
+// reorders even sized blocks of items in the queue
+// blocks start at size one and increases for each subsequent block
+template <typename T>
+void StackFun::scramble(queue<T> & q)
+{
+    stack<T> s;
+	// queue<T> q2;
+	int i=1,j=1,k=1;
+	int size = q.size();
+//	T temp;
+	
+	for ( int z=size; z>0 ; i++)
+		{
+		j=i;
+		k=i;
+		if (z-i<0) //if at end of list of elements and the end block does not 
+						// contain the specified 
+			{
+			j=z;
+			k=z;
+			}
+			
+			
+		//if block of elements is even, pop elements from queue into a temporary
+		//stack and then back into the end of the queue. This ensures reversal.
+		if (i%2 ==0 )
+			{
+						
+			for (; j>0 ; j--)
+				{
+				s.push(q.front() );				
+				q.pop();
+				z--;
+				}
+			for (; k>0 ; k--)
+				{
+				q.push (s.top() );
+				s.pop();
+				}	
+			}
+			
+		//if block of elements is odd, simply add them to end of queue without 
+		//modification	
+		else if (i%2!=0)
+			{
+			for (; j>0 ; j--)
+				{
+				q.push(q.front () );
+				q.pop();				
+				z--;
+				}
+			}
+		}
+		
+}
+
+// verifySame
+template <typename T>
+bool StackFun::verifySame(stack<T> & s, queue<T> & q)
+{
+    bool retval = true; // optional
+ //   T temp1; // rename me
+ //   T temp2; // rename :)
+    
+    return retval;
+}
+

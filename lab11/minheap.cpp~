@@ -1,0 +1,199 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+double getTime();
+
+// MinHeap
+//	 - default constructor
+template <class T>
+MinHeap<T>::MinHeap()
+	: array(1)
+{ }
+
+
+// MinHeap
+//	 - constructor 
+//	 - inserts oneDatum into array vector 
+//	 - initializes size to 1
+template <class T>
+MinHeap<T>::MinHeap(const vector<T> & unsortedArray, bool fast /* = true */)
+	: array(1)
+{
+
+if(unsortedArray.size() >0 )
+{
+	if (fast == true) // BuildHeap version
+	{
+	array.resize(unsortedArray.size() +1 );
+		//transfer array memory
+		for (unsigned int i=1, j=0; j<  unsortedArray.size(); i++, j++)
+			array[i]=unsortedArray[j];
+/*		
+		for(unsigned int j = 0; j < unsortedArray.size(); j++)
+			array.push_back(unsortedArray[j]);
+*/	
+		//heapify array
+		for(int k = array.size()/2; k > 0; k--)
+			heapifyDown(k);
+	}
+	else // N repeated insertions version
+	{
+		for( unsigned int N=0 ; N < unsortedArray.size() ; N++)
+			insert(unsortedArray[N]);
+	}
+}
+}
+
+// size - returns the number of elements in the heap
+template<class T>
+inline int MinHeap<T>::size() const
+{
+	return array.size() - 1;
+}
+
+// clear
+// removes all values from the heap by setting size to 0
+template <class T>
+void MinHeap<T>::clear()
+{
+	array.resize(1);
+}
+
+// findMin
+//  - return value:  reference to the least element in the heap;
+//  - assumes heap is not empty
+template <class T>
+T const & MinHeap<T>::findMin() const
+{
+	return array[1];
+}
+
+// removeMin
+//	- returns an element of type T that is the least
+//	  element in the heap.  
+//	- removes that element from the heap and reheapifies 
+template <class T>
+T MinHeap<T>::removeMin()
+{
+	if (isEmpty())
+	{
+		std::cout << "empty heap" << std::endl;
+		return T();
+	}
+
+	T temp = array[1];
+	array[1] = array[size()];
+	array.resize(array.size()-1);
+	heapifyDown(1);
+	return temp;
+}
+
+
+// insert
+//	- insElem - the item to be inserted into the minHeap
+//	- performs the insert and reheapifies
+template <class T>
+void MinHeap<T>::insert(T const & insElem)
+{
+	array.push_back(insElem);
+	heapifyUp(size());
+}
+
+// isEmpty
+//  - returns true if there is no data in the heap
+//  - returns false, otherwise
+template<class T>
+inline bool MinHeap<T>::isEmpty() const
+{
+	return (size() == 0);
+}
+
+// heapifyDown
+//  - helper function traverses tree restoring heap property
+template<class T>
+void MinHeap<T>::heapifyDown(int cIndex)
+{
+	//recursive base case cIndex bounds
+	if(cIndex >= 1 && cIndex<=size() )
+		{
+		if(hasAChild(cIndex)) //then heapify down leaf that became new root
+			{
+			int minCHILD = minChild(cIndex);
+			if ( array[cIndex] > array[minCHILD]) //needs to be moved down
+				{
+				swap( array[cIndex] , array[minCHILD] );
+				heapifyDown( minCHILD ); //follow our moving node
+				}
+			}
+		}
+		
+}
+
+// heapifyUp
+//  - helper function traverses tree restoring heap property
+template<class T>
+void MinHeap<T>::heapifyUp(int cIndex)
+{
+	if (cIndex > 1)
+	{
+		int tempParent = parent(cIndex);
+		if (array[cIndex] < array[tempParent])
+		{
+			swap(array[cIndex], array[tempParent]);
+			heapifyUp(tempParent);
+		}
+	}
+}
+
+// parent
+//  - returns the index of the parent of cIndex
+template<class T>
+inline int MinHeap<T>::parent(int cIndex) const
+{
+	return cIndex/2;
+}
+
+template<class T>
+inline bool MinHeap<T>::hasAChild(int cIndex)
+{
+	if((int) 2*cIndex <= size()) return true;
+	else return false;
+}
+
+template<class T>
+inline int MinHeap<T>::minChild(int cIndex)
+{
+	T leftChild = array[2*cIndex];
+	T rightChild = array[(2*cIndex)+1];	
+	
+	//if only left child exists
+	if((int)(2*cIndex+1) > (int)array.size()) return (2*cIndex);
+	
+	if( leftChild <= rightChild) return (2*cIndex);
+	else return (2*cIndex)+1;
+}
+
+
+// swap
+//  - swaps the values of the input parameters
+template<class T>
+inline void MinHeap<T>::swap(T & a, T & b)
+{
+	T temp = a;
+	a = b;
+	b = temp;
+}
+
+
+// print
+//  - prints out the heap's array
+template<class T>
+void MinHeap<T>::print() const
+{
+	std::cout << "[ - ";
+	for (unsigned int i = 1; i < array.size(); i++)
+		std::cout << array[i] << ' ';
+	std::cout << ']';
+}

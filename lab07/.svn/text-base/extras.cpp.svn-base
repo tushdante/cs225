@@ -1,0 +1,210 @@
+#include <algorithm>
+
+// height()
+template <typename T>
+int BinaryTree<T>::height() const
+{
+	// Call recursive helper function on root
+	return height(root);
+}
+
+// height() recursive helper function
+template <typename T>
+int BinaryTree<T>::height(const Node * subRoot) const
+{
+	// Base case
+	if (subRoot == NULL) return -1;
+	
+	// Recursive definition
+	return 1 + max(height(subRoot->left), height(subRoot->right));
+}
+
+
+
+// printLeftToRight()
+template <typename T>
+void BinaryTree<T>::printLeftToRight() const
+{
+	// Call recursive helper function on the root
+	printLeftToRight(root);
+
+	// Finish the line
+	cout << endl;
+}
+
+// printLeftToRight() recursive helper function, in order
+template <typename T>
+void BinaryTree<T>::printLeftToRight(const Node * subRoot) const
+{
+	// Base case - null node
+	if (subRoot == NULL)
+		return;
+
+	// Print left subtree, visit for first time
+	printLeftToRight(subRoot->left);
+
+	// Print this node
+	cout << subRoot->elem << ' ';
+
+	// Print right subtree
+	printLeftToRight(subRoot->right);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// mirror()
+template <typename T>
+void BinaryTree<T>::mirror()
+{
+	mirror(root);
+
+}
+
+template <typename T>
+void BinaryTree<T>::mirror(Node * subRoot)
+{
+	if (subRoot->left!=NULL) mirror(subRoot->left);
+	if (subRoot->right!=NULL) mirror(subRoot->right);		
+	Node* temp=subRoot->left;
+	subRoot->left=subRoot->right;
+	subRoot->right=temp;
+}
+
+
+// isOrdered()
+template <typename T>
+bool BinaryTree<T>::isOrdered() const
+{
+	return isOrdered(root);
+}
+
+
+template <typename T>
+bool BinaryTree<T>::isOrdered(Node * subRoot) const
+{
+	if(subRoot==NULL) return true;
+	
+	if      ( (maximum(subRoot->right)) < (subRoot->elem) ) return false;
+	if ( (minimum(subRoot->left))  > (subRoot->elem) ) return false;
+
+
+	return ( isOrdered(subRoot->left) && isOrdered(subRoot->right) );
+	
+}
+
+
+
+
+
+template <typename T>
+T BinaryTree<T>::maximum(Node * subRoot) const
+{
+	T maxLeft=0;
+	T maxRight=0;
+	
+	if(subRoot->left==NULL && subRoot->right==NULL)
+		{
+		return subRoot->elem;		
+		}
+		
+	if (subRoot->left!=NULL) 
+		{
+		maxLeft=maximum(subRoot->left);
+		}
+		
+	if (subRoot->right!=NULL) 
+		{
+		maxRight=maximum(subRoot->right);
+		}
+		
+	return max(subRoot->elem, max(maxRight, maxLeft));
+}
+
+template <typename T>
+T BinaryTree<T>::minimum(Node * subRoot) const
+{
+	T minLeft=INT_MAX;
+	T minRight=INT_MAX;
+	
+	if(subRoot->left==NULL && subRoot->right==NULL)
+		{
+		return subRoot->elem;		
+		}
+		
+	if (subRoot->left!=NULL) 
+		{
+		minLeft=minimum(subRoot->left);
+		}
+		
+	if (subRoot->right!=NULL) 
+		{
+		minRight=minimum(subRoot->right);
+		}
+		
+	return min(subRoot->elem, min(minRight, minLeft));
+}
+
+
+
+
+
+
+// printPathSums()
+template <typename T>
+void BinaryTree<T>::printPaths() const
+{
+	vector<T> myvec;
+	myvec.push_back(root->elem);
+	printPaths(root, myvec);
+}
+
+template <typename T>
+void BinaryTree<T>::printPaths(Node * subRoot, vector<T> printMe) const
+{
+	if(subRoot->left==NULL && subRoot->right==NULL)
+		{
+		cout << "Path: ";
+		for(int i=0; i<printMe.size(); i++)
+			{
+			cout << printMe[i] << " ";
+			}
+		cout << endl;
+
+		return;
+		}
+		
+	if(subRoot->left!=NULL)
+		{
+		printMe.push_back((subRoot->left)->elem);
+		printPaths(subRoot->left, printMe);
+		printMe.pop_back();	
+		}
+
+	if(subRoot->right!=NULL)
+		{
+		printMe.push_back((subRoot->right)->elem);
+		printPaths(subRoot->right, printMe);
+		printMe.pop_back();	
+		}
+}
+
+
+
+
+
+// sumDistances()
+template <typename T>
+int BinaryTree<T>::sumDistances() const
+{
+	return -1; // Your code here
+}
+

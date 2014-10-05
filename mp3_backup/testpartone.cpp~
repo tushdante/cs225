@@ -1,0 +1,192 @@
+/*************************************************\
+|                                                 |
+|  testpartone.cpp -- CS225 MP3, Spring '09       |
+|                                                 |
+|  This file tests the five List functions        |
+|    added in MP3.                                |
+|                                                 |
+|  Written by John Fischer, Fall '06; slight      |
+|    changes by Bill Kinnersley, Spring '07;      |
+|    slight changes by Daniel Hoodin, Spring      |
+|    '09                                          |
+|                                                 |
+\*************************************************/
+
+#include <iostream>
+#include <string>
+#include "EasyBMP.h"
+#include "doubly-linked-list.h"
+
+using std::string;
+using std::cout;
+using std::endl;
+using std::ostream;
+
+
+// The List class assumes the existence of operator==, operator!=, and
+//   operator<< for its elements.  The EasyBMP library does not provide
+//   these out of the box for RGBApixels, so we implement them here.
+
+bool operator==(RGBApixel const & left, RGBApixel const & right)
+{
+   return (left.Red == right.Red && left.Green == right.Green &&
+           left.Blue == right.Blue && left.Alpha == right.Alpha);
+}
+
+bool operator!=(RGBApixel const & left, RGBApixel const &right)
+{
+   return !(left == right);
+}
+
+ostream & operator<<(ostream & out, RGBApixel pixel)
+{
+   out << "Pixel with color value (";
+   out << pixel.Red << "," << pixel.Green << "," << pixel.Blue << ")\n";
+   return out;
+}
+
+// Utility function which rebuilds an image from a list of pixels
+void buildImage(BMP & image, List<RGBApixel> theList, int width, int height) 
+{
+   if (width * height != theList.length()) {
+      cout << "Error: invalid parameters to buildImage.\n";
+      return;
+   }
+
+   image.SetSize(width, height);
+   int x = 0, y = 0;
+   theList.front();
+   for (int pos = 0; pos < theList.length(); pos++) {
+      *image(x,y) = theList.retrieve();
+
+      // move to next pixel position
+      x++;
+      if (x >= width) {
+         x = 0;
+         y++;
+      }
+
+      // avoid spurious warning message
+      if (pos != theList.length() - 1)
+         theList.forwardOne();
+   }
+}
+
+void setup(string const & filename, List<RGBApixel> & pixelList, int & width, int & height)
+{
+   BMP imgIn;
+   imgIn.ReadFromFile(filename.c_str());
+
+   width = imgIn.TellWidth();
+   height = imgIn.TellHeight();
+
+   // fill list with pixels
+   pixelList.clear();
+   for (int y = 0; y < height; y++)
+      for(int x = 0; x < width; x++)
+         pixelList.insertAfter(*imgIn(x,y));
+}
+
+// test -- splitList(), appendList()
+void testSplitListAndAppendList()
+{
+	List<int> intlist, passlist;
+	
+	for (int i=1; i<=8; i++)
+		{
+		intlist.insertAfter(i);	
+		}
+	
+		for (int i=1; i<=1; i++)
+		{
+		passlist.insertAfter(i);	
+		}
+		
+	intlist.print();
+	intlist.appendList(passlist);
+	intlist.print();
+	
+	
+	printf("Here is my test finishing\n");
+
+
+
+/*#32 (1) - list of size 1 appended to list of size 8, printSize
+   int width, height;
+   List<RGBApixel> firstList, secondList, thirdList, fourthList;
+   setup("in_01.bmp", firstList, width, height);
+   int numPixels = firstList.length();
+
+
+   // create four equal horizontal stripes
+   secondList = firstList.splitList(numPixels/4 + 1);
+   thirdList = secondList.splitList(numPixels/4 + 1);
+   fourthList = thirdList.splitList(numPixels/4 + 1);
+
+   // stitch the stripes back together
+   thirdList.appendList(secondList);
+   fourthList.appendList(thirdList);
+   fourthList.appendList(firstList);
+
+   // put list into second image
+   BMP imgOut;
+   buildImage(imgOut, fourthList, width, height);
+   imgOut.WriteToFile("split.bmp");
+   
+*/   
+}
+
+// test -- mixList()
+void testMixList()
+{
+
+	List<int> intlist, passlist;
+	
+	for (int i=1; i<=8; i++)
+		{
+		intlist.insertAfter(i);	
+		}
+	
+		for (int i=9; i<=17; i++)
+		{
+		passlist.insertAfter(i);	
+		}
+		
+	intlist.print();
+	intlist.mixList(passlist);
+	intlist.print();
+	
+	
+	printf("Here is my test finishing\n");
+	
+/*
+   List<RGBApixel> firstList, secondList;
+   BMP imgIn, imgIn2;
+   imgIn.ReadFromFile("in_02.bmp");
+   imgIn2.ReadFromFile("in_03.bmp");
+
+   // fill lists with pixels
+   for (int y = 0; y < 200; y++) { 
+      for(int x = 0; x < 150; x++) {
+         firstList.insertAfter(*imgIn(2*x,y));
+         secondList.insertAfter(*imgIn2(2*x+1,y));
+      }
+   }
+
+   firstList.mixList(secondList);
+
+   BMP imgOut;
+   buildImage(imgOut, firstList, 300, 200);
+   imgOut.WriteToFile("mixed.bmp");
+   */
+   
+}
+
+int main()
+{
+// testSplitListAndAppendList();
+   testMixList();
+
+   return 0;
+}
+

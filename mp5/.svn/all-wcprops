@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5
+END
+quadtree.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/18134/levitas1/mp5/quadtree.h
+END
+EasyBMP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/EasyBMP.cpp
+END
+soln_mp5.out
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_mp5.out
+END
+soln_outRotated.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_outRotated.bmp
+END
+in.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/in.bmp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/16433/levitas1/mp5/main.cpp
+END
+EasyBMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/EasyBMP.h
+END
+diffall.sh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/diffall.sh
+END
+soln_outCopy.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_outCopy.bmp
+END
+soln_outHalf.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_outHalf.bmp
+END
+quadtree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/16452/levitas1/mp5/quadtree.cpp
+END
+soln_outEtc.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_outEtc.bmp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/Makefile
+END
+soln_outPruned.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/12733/levitas1/mp5/soln_outPruned.bmp
+END

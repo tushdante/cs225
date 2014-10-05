@@ -1,0 +1,757 @@
+// **************************************************************
+// *                                                            *
+// *  quadtree.cpp                                              *
+// *                                                            *
+// *  A quadtree class                                          *
+// *                                                            *
+// *  CS 225 Fall 2006                                          *
+// *                                                            *
+// **************************************************************
+
+#include <cstddef>
+#include <iostream>
+
+using namespace std;
+
+#include "quadtree.h"
+#include "EasyBMP.h"
+
+//No Arg Constructor
+Quadtree::Quadtree()
+{
+root=NULL;
+DIMENSION=0;
+}
+
+//2 Parameter Constructor: 1) Input BMP and 2) Dimension "d"
+Quadtree::Quadtree(const BMP original, int d)
+{
+	DIMENSION=d;
+	theImage=original;
+	root=NULL;
+	buildTree (original , d);
+}
+
+/*Param. Constructor helper function--Constructs the Quadtree recursively from the BMP.
+This function takes two arguments, a BMP object source, and an integer d, in that order. It returns nothing. It should delete the current contents of the Quadtree object, then turn it into a Quadtree object representing the upper-left d by d block of source. You may assume that d is a power of two, and that the width and height of source are each at least d.
+*/
+void Quadtree::buildTree(const BMP & buildMe , int d)
+{
+	//Clear anything existing in tree
+	if(root!=NULL)
+		{
+		clear(root);
+		}
+	delete root;
+	root=NULL;		
+
+	//Special case for a single pixel in root
+	if (d==1)
+		{
+		root = new QuadtreeNode( *( buildMe(0,0)));
+		return;
+		}
+		
+	root = new QuadtreeNode( );		
+	DIMENSION=d;
+	BMP cropped;
+	cropped.SetSize(d, d);
+
+	//check if need to crop image to square dimensions "d"
+	if(d!=buildMe.TellWidth() || d!=buildMe.TellHeight() )
+		{
+		choppedByD( cropped, buildMe, d );
+		}
+	else cropped=buildMe;
+	
+	theImage=cropped;
+	root->resolution=d;
+	recursiveBuild(cropped, root, d );
+}
+
+
+//recursive part of buildTree
+void Quadtree::recursiveBuild(BMP & buildMe, QuadtreeNode * & subRoot, int d)
+{
+	if(d<=0) return;
+int red1, red2, red3, red4;
+int green1, green2, green3, green4;
+int blue1, blue2, blue3, blue4;
+RGBApixel tempPix;
+BMP tempBMP;
+
+	//Base Case: assign pixels directly to Leaves of Quadtree
+	if ( d==1 )
+		{
+		subRoot->nwChild=NULL;
+		subRoot->neChild=NULL;
+		subRoot->swChild=NULL;
+		subRoot->seChild=NULL;
+		subRoot->resolution=1;
+		subRoot->element=*(buildMe(0,0));
+		return;
+		}
+	
+	//Top Left Corner
+	subRoot->nwChild = new QuadtreeNode();
+	cropped4recursion(tempBMP, buildMe, 0, 0, d/2 ); 
+	recursiveBuild(tempBMP, subRoot->nwChild, d/2 );
+
+	subRoot->nwChild->resolution=d/2;
+
+	//Top Right Corner
+	subRoot->neChild = new QuadtreeNode();
+	cropped4recursion(tempBMP, buildMe,(d/2), 0 , d/2 );
+	recursiveBuild(tempBMP, subRoot->neChild, d/2 );
+
+	subRoot->neChild->resolution=d/2;
+
+
+	//Bottom Left Corner
+	subRoot->swChild = new QuadtreeNode();
+	cropped4recursion(tempBMP, buildMe, 0 , (d/2), d/2 );
+	recursiveBuild(tempBMP, subRoot->swChild, d/2 );
+
+	subRoot->swChild->resolution=d/2;
+
+
+	//Bottom Right Corner
+	subRoot->seChild = new QuadtreeNode();
+	cropped4recursion(tempBMP, buildMe, (d/2) , (d/2), d/2 );
+	recursiveBuild(tempBMP, subRoot->seChild, d/2 );
+
+	subRoot->seChild->resolution=d/2;
+
+	//grab pixel values for average
+	if(subRoot->nwChild!=NULL)
+		{
+		red1=((subRoot->nwChild)->element).Red;
+		green1=((subRoot->nwChild)->element).Green;
+		blue1=((subRoot->nwChild)->element).Blue;
+	
+		red2=((subRoot->neChild)->element).Red;
+		green2=((subRoot->neChild)->element).Green;
+		blue2=((subRoot->neChild)->element).Blue;
+		
+		red3=((subRoot->swChild)->element).Red;
+		green3=((subRoot->swChild)->element).Green;
+		blue3=((subRoot->swChild)->element).Blue;		
+		
+		red4=((subRoot->seChild)->element).Red;
+		green4=((subRoot->seChild)->element).Green;
+		blue4=((subRoot->seChild)->element).Blue;
+		}
+
+	//Take average 
+	if(subRoot->neChild!=NULL)
+		{
+		tempPix.Red= ((red1 + red2 + red3 + red4) /4);
+		tempPix.Green= ((green1 + green2 + green3 + green4 )/ 4 );
+		tempPix.Blue=((blue1 + blue2 + blue3 + blue4 )/ 4 );
+		
+		subRoot->element=tempPix;
+		}
+
+}
+
+//Constructor Helper. Crops Source to dimensions "d"
+void Quadtree::choppedByD(BMP  & ChopMe, BMP const & fromMe, int d2)
+{
+	for(int i=0 ; i<d2 ; i++)
+		{
+		for(int j=0 ; j<d2 ; j++)
+			{
+			ChopMe(i,j)->Red=fromMe(i,j)->Red;
+			ChopMe(i,j)->Green=fromMe(i,j)->Green;
+			ChopMe(i,j)->Blue=fromMe(i,j)->Blue;
+			}
+		}
+}
+
+//Constructor/buildTree Helper. Crops image to dimensions of specified quadrant
+void Quadtree::cropped4recursion(BMP & overwriteMe, BMP & fromMe, int lowX, int lowY, int D)
+{
+overwriteMe.SetSize(D, D);
+
+	for(int i=0, x=lowX ; i<D ; i++, x++)
+		{
+		for(int j=0 ,y=lowY; j<D ; j++, y++)
+			{
+			overwriteMe(i,j)->Red=fromMe(x,y)->Red;
+			overwriteMe(i,j)->Green=fromMe(x,y)->Green;
+			overwriteMe(i,j)->Blue=fromMe(x,y)->Blue;
+			}
+		}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//											BIG 3													  //
+///////////////////////////////////////////////////////////////////////////////
+
+
+// 1) Copy Constructor for QuadTree
+//    -recursive copying actually handled via QuadtreeNode cctor
+Quadtree::Quadtree(Quadtree const & source)
+{
+	if(source.root==NULL)
+	{
+	root=NULL;
+	return;
+	}
+	
+	root = new QuadtreeNode(source.root);
+ 	theImage=source.theImage;
+ 	DIMENSION=source.DIMENSION;
+}
+
+//QuadtreeNode cctor
+Quadtree::QuadtreeNode::QuadtreeNode( QuadtreeNode * const & subRoot)
+{
+//traverse
+	if(subRoot->nwChild != NULL)
+		{
+		nwChild = new QuadtreeNode(subRoot->nwChild);
+		neChild = new QuadtreeNode(subRoot->neChild);
+		swChild = new QuadtreeNode(subRoot->swChild);
+		seChild = new QuadtreeNode(subRoot->seChild);		
+		/*
+		OR ???
+		nwChild = new QuadtreeNode();
+		nwChild->QuadtreeNode(subRoot->nwChild)
+		neChild = new QuadtreeNode();
+		neChild->QuadtreeNode(subRoot->neChild)
+		swChild = new QuadtreeNode();
+		swChild->QuadtreeNode(subRoot->swChild);
+		seChild = new QuadtreeNode();
+		seChild->QuadtreeNode(subRoot->seChild);
+		*/		
+		}
+		
+	else 
+		{
+		nwChild = NULL;
+		neChild = NULL;
+		swChild = NULL;
+		seChild = NULL;		
+		}
+//copy node members		
+		element=subRoot->element;
+		resolution=subRoot->resolution;
+}
+
+// 2) Assignment Operator = 
+Quadtree const & Quadtree::operator=(const Quadtree & source)
+{
+	//check for self-assignment
+	if (&source == this)
+		{
+		return *this;
+		}
+	
+	// clear 
+	if(root != NULL)
+		{
+		clear(root);
+		delete root;
+		root=NULL;
+		}
+		
+	// copy	
+	root= new QuadtreeNode(source.root);
+ 	theImage=source.theImage;
+ 	DIMENSION=source.DIMENSION;
+
+	return *this;
+}
+
+
+
+// 3) Destructor 
+Quadtree::~Quadtree()
+{
+	if(root !=NULL)
+	{
+	clear(root);
+	delete root;
+	root=NULL;	
+	}
+}
+
+//Destructor helper functions
+void Quadtree::clear(QuadtreeNode * & subRoot)
+{
+	if(subRoot->nwChild != NULL)
+		{
+		clear(subRoot->nwChild);
+		
+		clear(subRoot->neChild);
+		
+		clear(subRoot->swChild);
+		
+		clear(subRoot->seChild);
+		}
+		
+	else 
+		{
+		delete subRoot;		
+		subRoot=NULL;
+		}
+}
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//									5.1: decompress/getPixel						        //
+///////////////////////////////////////////////////////////////////////////////
+
+/*
+The getPixel Function
+This function takes two arguments, x and y, in that order, both nonnegative integers. It returns the RGBApixel corresponding to the pixel at coordinates (x, y) in the bitmap image which the quadtree represents. Note that the quadtree may not contain a node specifically corresponding to this pixel (due, for instance, to pruning - see below). In this case, getPixel will retrieve the pixel (i.e. the color) of the square region within which the smaller query grid cell would lie. (That is, it will return the element of the nonexistent leaf's deepest surviving ancestor.) If the supplied coordinates fall outside of the bounds of the underlying bitmap, or if the current Quadtree is "empty" (i.e., it was created by the default constructor) then the returned RGBApixel should be the one which is created by the default RGBApixel constructor.
+*/
+
+
+RGBApixel Quadtree::getPixel(int x, int y) const
+{
+	if (root==NULL || x>=DIMENSION || y>=DIMENSION) return RGBApixel();
+	
+	return root->getPixel(x, y, DIMENSION);
+	
+}
+
+RGBApixel Quadtree::QuadtreeNode::getPixel(int x, int y, int d) const
+{
+	RGBApixel tempPix;
+	
+	if(nwChild != NULL)
+		{
+		// NW
+		if ( ( x <= ((d/2)-1) ) && (y <= ((d/2)-1) ))
+			tempPix = nwChild->getPixel( x , y , d/2 );
+		// NE 
+		else if ( ( x >= (d/2) ) && (y <= ((d/2)-1) ))
+			tempPix = neChild->getPixel( x-(d/2) ,y , d/2 );
+		// SW
+		else if ( ( x <=((d/2)-1) ) && (y >= (d/2) ))
+			tempPix = swChild->getPixel( x , y - (d/2) , d/2 );
+		// SE
+		else
+			tempPix = seChild->getPixel( x - (d/2) , y - (d/2), d/2 );
+			
+		return tempPix;
+		}
+
+	else return element;
+}
+
+
+/*
+The decompress Function
+This function takes no arguments, and returns a BMP object. The return value should be the underlying BMP object represented by the quadtree. If the current Quadtree is "empty" (i.e., it was created by the default constructor) then the returned BMP should be the one which is created by the default BMP constructor. 
+
+*/
+BMP Quadtree::decompress() const
+{
+	BMP returnMe;
+	if(root==NULL) return returnMe;
+	
+	returnMe.SetSize(DIMENSION, DIMENSION);
+	
+	for(int i=0; i<DIMENSION ; i++)
+			for(int j=0; j<DIMENSION ; j++)
+			{
+			*(returnMe(i,j) )= getPixel(i, j);			
+			}
+			
+	return returnMe;	
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//												5.2												  //
+///////////////////////////////////////////////////////////////////////////////
+
+//ROTATE
+//This function takes no arguments, and returns nothing. clockwiseRotate() 
+//rotates the Quadtree object's underlying image clockwise by 90 degrees. 
+void Quadtree::clockwiseRotate()
+{
+	rotateHelper(root);
+}
+
+void Quadtree::rotateHelper(QuadtreeNode * & subRoot)
+{
+	if(subRoot!=NULL)
+		{
+		//swapping
+		QuadtreeNode * temp=subRoot->nwChild;
+		subRoot->nwChild=subRoot->swChild;
+	
+		QuadtreeNode * temp2=subRoot->neChild;
+		subRoot->neChild=temp;
+		
+		temp=subRoot->seChild;
+		subRoot->seChild=temp2;
+		
+		subRoot->swChild=temp;
+	
+		if(subRoot->nwChild==NULL)
+			{
+			return;		
+			}
+		//traversal
+		rotateHelper(subRoot->nwChild);
+		rotateHelper(subRoot->neChild);
+		rotateHelper(subRoot->swChild);	
+		rotateHelper(subRoot->seChild);	
+		}
+}		
+
+/*
+Consider a node n and the subtree, Tn rooted at n, and let avg denote the component-wise average color value of all the leaves of Tn. Component-wise average means that every internal node in the tree calculates its value by averaging its immediate children. Node n is pruned if the color value of no leaf in Tn, differs from avg by more than tolerance.
+
+We define the "difference" between two colors and to be .
+
+To be more complete, if the tolerance condition is met at a node n, then the block of the underlying image which n represents contains only pixels which are "nearly" the same color. For each such node n, we remove from the quadtree all four children of n, and their respective subtrees (an operation we call a pruning). This means that all of the leaves that were deleted, corresponding to pixels whose colors were similar, are now replaced by a single leaf with color equal to the average color over that square region.
+
+The prune function, given a tolerance value, prunes the quadtree as extensively as possible. (Note, however, that we do not want the prune function to do an "iterative" prune. It is conceivable that by pruning some mid-level node n, an ancestor p of n then becomes prunable, due to the fact that the prune changed the leaves descended from p. Your prune function should evaluate the prunability of each node based on the presence of all nodes, and then delete the subtrees based at nodes deemed prunable.)
+
+You should start pruning from the root of the quadtree.
+*/
+
+
+void Quadtree::prune(int tolerance)
+{
+		// empty tree
+		if(root==NULL) return;
+		//d=2 tree
+		if(root->nwChild->nwChild==NULL)
+			{
+			if(root->nwChild->pruneNodes(tolerance, root->element) &&
+				root->neChild->pruneNodes(tolerance, root->element) &&
+				root->swChild->pruneNodes(tolerance, root->element) &&
+				root->seChild->pruneNodes(tolerance, root->element)    )
+				{
+				clear (root->nwChild);
+				clear (root->neChild);
+				clear (root->swChild);
+				clear (root->seChild);
+				root->nwChild=NULL;	
+				root->neChild=NULL;
+				root->swChild=NULL;
+				root->seChild=NULL;
+				return;
+				}
+			}
+		//all other cases	
+		pruneHelper(tolerance, root);
+}
+
+void Quadtree::pruneHelper(int const tolerance , QuadtreeNode* subRoot)
+{
+		if(subRoot->nwChild==NULL) return;
+		
+		
+		//call to traverse from given Node to leaves & cut if tolerance allows
+		if(subRoot->nwChild->pruneNodes(tolerance, subRoot->element) &&
+			subRoot->neChild->pruneNodes(tolerance, subRoot->element) &&
+			subRoot->swChild->pruneNodes(tolerance, subRoot->element) &&
+			subRoot->seChild->pruneNodes(tolerance, subRoot->element)    )
+			{
+			clear (subRoot->nwChild);
+			clear (subRoot->neChild);
+			clear (subRoot->swChild);
+			clear (subRoot->seChild);	
+			subRoot->nwChild=NULL;	
+			subRoot->neChild=NULL;
+			subRoot->swChild=NULL;
+			subRoot->seChild=NULL;	
+			}
+		
+		
+		
+			
+		//traverse tree top down 
+		if(subRoot->nwChild != NULL)
+			{
+			pruneHelper(tolerance, subRoot->nwChild);
+			pruneHelper(tolerance, subRoot->neChild);
+			pruneHelper(tolerance, subRoot->swChild);
+			pruneHelper(tolerance, subRoot->seChild);			
+			}
+}
+
+
+
+bool Quadtree::QuadtreeNode::pruneNodes(int const tolerance, const RGBApixel tolerateMe)
+{
+	if(nwChild==NULL)
+		{
+		bool TOL;
+		double R, G, B, R2, G2, B2;
+		R2 = element.Red;	 	
+		G2 = element.Green;
+		B2 = element.Blue;
+		R = tolerateMe.Red;
+		G = tolerateMe.Green;
+		B = tolerateMe.Blue;
+		TOL = (pow((R-R2),2)+pow((B-B2),2)+pow((G-G2),2)) <= tolerance;
+		return TOL;	
+		}
+	
+	bool Tolerant1, Tolerant2,Tolerant3, Tolerant4;	
+		
+	Tolerant1=nwChild->pruneNodes(tolerance, tolerateMe);
+	Tolerant2=neChild->pruneNodes(tolerance, tolerateMe);
+	Tolerant3=swChild->pruneNodes(tolerance, tolerateMe);
+	Tolerant4=seChild->pruneNodes(tolerance, tolerateMe);		
+	return (Tolerant1 && Tolerant2 && Tolerant3 && Tolerant4);
+			
+}
+
+
+
+
+
+
+
+
+
+
+int Quadtree::pruneSize(int tolerance) const
+{
+/*
+		// empty tree
+		if(root==NULL) return 0;
+		
+		//variable: total leaves to be cut (updated by reference )
+		int TOTES=0;
+		//d=2 tree
+		if(root->nwChild->nwChild==NULL)
+			{
+			if(root->nwChild->pruneNodes(tolerance, root->element) &&
+				root->neChild->pruneNodes(tolerance, root->element) &&
+				root->swChild->pruneNodes(tolerance, root->element) &&
+				root->seChild->pruneNodes(tolerance, root->element)    )
+				{
+				return 4;
+				}
+			else return 0;
+			}
+			
+		//all other cases	
+		pruneSizeHelper(tolerance, root, TOTES);
+		return TOTES;	
+*/
+return 0;
+}
+
+
+
+void Quadtree::pruneSizeHelper(int const tolerance , QuadtreeNode* subRoot, int & totes)
+{
+/*
+		if(subRoot->nwChild==NULL) return;
+		
+		
+		//call to traverse from given Node to leaves & update TOTES
+		
+		if(subRoot->nwChild->pruneNodes(tolerance, subRoot->element, totes) &&
+			subRoot->neChild->pruneNodes(tolerance, subRoot->element, totes) &&
+			subRoot->swChild->pruneNodes(tolerance, subRoot->element, totes) &&
+			subRoot->seChild->pruneNodes(tolerance, subRoot->element, totes)	  )
+			{
+			totes=totes+4;
+			}
+		
+		
+			
+		//traverse tree top down 
+		if(subRoot->nwChild != NULL)
+			{
+			pruneSizeHelper(tolerance, subRoot->nwChild, totes);
+			pruneSizeHelper(tolerance, subRoot->neChild, totes);
+			pruneSizeHelper(tolerance, subRoot->swChild, totes);
+			pruneSizeHelper(tolerance, subRoot->seChild, totes);			
+			}
+*/
+return;
+}
+
+
+
+
+
+
+
+int Quadtree::idealPrune(int numLeaves) const
+{
+
+return 1011;
+
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//										QuadtreeNode Cctors									  //
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+Quadtree::QuadtreeNode::QuadtreeNode()
+{
+	nwChild=NULL;
+	neChild=NULL;
+	swChild=NULL;
+	seChild=NULL;
+	resolution=0;
+}
+
+Quadtree::QuadtreeNode::QuadtreeNode(RGBApixel input)
+{   
+	nwChild=NULL;
+	neChild=NULL;
+	swChild=NULL;
+	seChild=NULL;
+	
+	resolution=1;	
+	element=input;
+}
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//									Testing/grading functions 								  //
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+// printTree (public interface)
+//   - parameters: none
+//   - prints the contents of the Quadtree using a preorder traversal
+void Quadtree::printTree() const {
+   if (root == NULL)
+      cout << "Empty tree.\n";
+   else
+      printTree(root, 1);
+}
+
+
+// operator<< (not a member function)
+//   - parameters: ostream & - output stream to be used for output
+//                 RGBApixel const & pixel - pixel to be output
+//   - prints the contents of the given RGBApixel to the given output stream
+ostream & operator<<(ostream & out, RGBApixel const & pixel) {
+   out << "(" << (int) pixel.Red << "," << (int) pixel.Green 
+       << "," << (int) pixel.Blue << ")";
+   return out;
+}
+
+
+// printTree (private helper)
+//   - parameters: QuadtreeNode *current - pointer to the root of the
+//                    subQuadtree which we wish to print
+//                 int level - the current recursion depth; used for
+//                    determining when to terminate recursion (see note below)
+//   - prints the leaves of the Quadtree using a preorder traversal
+void Quadtree::printTree(QuadtreeNode const * current, int level) const {
+   // Is this a leaf?
+   // Note: it suffices to check only one of the child pointers,
+   // since each node should have exactly zero or four children.
+   if (current->neChild == NULL) {
+      cout << current->element << " at depth " << level << "\n";
+      return;
+   }
+
+   // This clause added for the sake of grading; we will never call
+   // printTree() on quadtrees larger than  128x128.  (This is a
+   // necessary restriction, as the grading scripts choke on programs
+   // which produce excessive amounts of output.)
+   if (level > 7) {
+      cout << "Error: infinite loop detected in printTree();"
+           << " quadtree has a loop.\n";
+      cout << "Aborting program.\n";
+      exit(1);
+   }
+
+   // Standard preorder traversal
+   printTree(current->neChild, level + 1);
+   printTree(current->seChild, level + 1);
+   printTree(current->swChild, level + 1);
+   printTree(current->nwChild, level + 1);
+
+   return;
+}
+
+
+// operator==
+//   - parameters: Quadtree const & other - reference to a const Quadtree
+//                    object, against which the current Quadtree will be
+//                    compared
+//   - return value: a boolean which is true if the Quadtrees are deemed
+//        "equal", and false otherwise
+//   - compares the current Quadtree with the parameter Quadtree, and
+//        determines whether or not the two are the same
+// Note: this method relies on the private helper method compareTrees()
+bool Quadtree::operator==(Quadtree const & other) const {
+   return compareTrees(root, other.root);
+}
+
+
+// compareTrees
+//   - parameters: QuadtreeNode const * firstPtr - pointer to the root
+//                    of a subtree of the "first" Quadtree under
+//                    consideration
+//                 QuadtreeNode const * secondPtr - pointer to the root
+//                    of a subtree of the "second" Quadtree under
+//                    consideration
+//   - return value: a boolean which is true if the subQuadtrees are deemed
+//        "equal", and false otherwise
+//   - compares the subQuadtree rooted at firstPtr with the subQuadtree
+//        rooted at secondPtr, and determines whether the two are the same
+//   - this function only compares the leaves of the trees, as we did not
+//     impose any requirements on what you should do with interior nodes
+bool Quadtree::compareTrees(QuadtreeNode const * firstPtr,
+                            QuadtreeNode const * secondPtr) const {
+   if (firstPtr == NULL && secondPtr == NULL)
+      return true;
+
+   if (firstPtr == NULL || secondPtr == NULL)
+      return false;
+
+   // if they're both leaves, see if their elements are equal
+   // note: child pointers should _all_ either be NULL or non-NULL,
+   // so it suffices to check only one of each
+   if (firstPtr->neChild == NULL && secondPtr->neChild == NULL) {
+      if (firstPtr->element.Red != secondPtr->element.Red ||
+         firstPtr->element.Green != secondPtr->element.Green ||
+         firstPtr->element.Blue != secondPtr->element.Blue)
+         return false;
+      else
+         return true;
+   }
+
+   // they aren't both leaves, so recurse
+   return (compareTrees(firstPtr->neChild, secondPtr->neChild) &&
+           compareTrees(firstPtr->nwChild, secondPtr->nwChild) &&
+           compareTrees(firstPtr->seChild, secondPtr->seChild) &&
+           compareTrees(firstPtr->swChild, secondPtr->swChild));
+}
+
+
+
+
+
+
+
+
+

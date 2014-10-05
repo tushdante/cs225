@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04
+END
+flower.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/8559/levitas1/lab04/flower.cpp
+END
+EasyBMP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/EasyBMP.cpp
+END
+shape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/8559/levitas1/lab04/shape.cpp
+END
+circle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/8232/levitas1/lab04/circle.cpp
+END
+EasyBMP_DataStructures.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/EasyBMP_DataStructures.h
+END
+flower.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/8559/levitas1/lab04/flower.h
+END
+EasyBMP_BMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/EasyBMP_BMP.h
+END
+rectangle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/rectangle.cpp
+END
+EasyBMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/EasyBMP.h
+END
+shape.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/8559/levitas1/lab04/shape.h
+END
+triangle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/triangle.cpp
+END
+circle.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/circle.h
+END
+EasyBMP_VariousBMPutilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/EasyBMP_VariousBMPutilities.h
+END
+rectangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/rectangle.h
+END
+triangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/triangle.h
+END
+test_pure_virtual.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/test_pure_virtual.cpp
+END
+color.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/color.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/main.cpp
+END
+test_constructor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/test_constructor.cpp
+END
+vector2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/vector2.cpp
+END
+test_virtual.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/test_virtual.cpp
+END
+drawable.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/8232/levitas1/lab04/drawable.h
+END
+line.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/line.cpp
+END
+test_slicing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/test_slicing.cpp
+END
+truck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/8232/levitas1/lab04/truck.cpp
+END
+vector2.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/vector2.h
+END
+line.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/line.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/Makefile
+END
+test_destructor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sp11-cs225/!svn/ver/7892/levitas1/lab04/test_destructor.cpp
+END
+truck.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/8232/levitas1/lab04/truck.h
+END

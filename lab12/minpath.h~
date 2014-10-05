@@ -1,0 +1,33 @@
+/*
+    Lab 12: Minimum Path
+    Written by Sean Massung for CS 225 Spring 2011
+*/
+
+#ifndef _PATH_H_
+#define _PATH_H_
+
+/*
+  Tasks:
+    1. Return the shortest distance (in edges) between the node labeled start and the node labeled end.
+    2. Label each edge as "MINPATH" if it is part of the minimum path.
+  Notes/hints:
+    - You may use the stack and queue classes from the STL if you'd like.
+    - Assume that this is an *unweighted* graph (ignore the weights).
+    - In order to draw (and correctly count) the edges between the two vertices,
+        you will have to remember each vertex's "parent" somehow...
+*/
+
+#include <stack>
+#include <queue>
+#include "graph.h"
+
+using std::stack;
+using std::queue;
+
+int minPath(Graph & g, string start, string end);
+
+// define any helper functions here
+void BFShelper(Graph &  g , string currentVertex , int &  minLength, 
+						SCHashTable< string, string > & predecessorPath );
+
+#endif

@@ -1,0 +1,23 @@
+<html>
+<head> <title> tests </title> </head>
+<body>
+<table border=2>
+  <tr>
+    <td> <img src="./bfsGradientTest.gif"> </td>
+    <td> <img src="./dfsGradientTest.gif"> </td>
+  </tr>
+  <tr>
+    <td> <img src="./bfsGridTest.gif"> </td>
+    <td> <img src="./dfsGridTest.gif"> </td>
+  </tr>
+  <tr>
+    <td> <img src="./bfsSolidTest.gif"> </td>
+    <td> <img src="./dfsSolidTest.gif"> </td>
+  </tr>
+</table>
+<table border=2>
+  <tr><td><img src="./gradientColorPickerTest.gif"></td></tr>
+  <tr><td><img src="./gridColorPickerTest.gif"></td></tr>
+  <tr><td><img src="./solidColorPickerTest.gif"></td></tr>
+</table>
+</body>

@@ -1,0 +1,78 @@
+/*
+    Lab 12: Minimum Weight
+    Written by Sean Massung for CS 225 Spring 2011
+*/
+
+#include "minweight.h"
+#include <limits>
+int minWeight(Graph & g)
+{
+	string minVertex1;
+	string minVertex2;
+	int min= 2147483647;
+	vector<string> AllVerticies = g.getVertices();
+	
+	//set all verticies to be unexplored (edges already so)
+	for (int i=0 ; i<AllVerticies.size() ; i++)
+		{
+		g.setVertexMark( AllVerticies[i] , "UNEXPLORED" );
+		}
+
+	//DFS search on all nodes in vector in case more than one connected component
+	for (int i=0; i<AllVerticies.size() ; i++)
+		if ( g.getVertexMark(AllVerticies[i]) == "UNEXPLORED")
+			DFShelper( g , AllVerticies[i] , minVertex1 ,  minVertex2 , min );
+
+	//set min Edge
+	g.setEdgeMark(minVertex1, minVertex2 , "MIN");	
+
+   return min;
+}
+
+
+void DFShelper(Graph & g , string currentVertex , 
+								   string & minVertex1 , string & minVertex2, int & min)
+{
+	g.setVertexMark( currentVertex , "VISITED" );
+	vector<string> adjacentVerticies = g.getAdjacent(currentVertex);
+
+	for (int i=0; i<adjacentVerticies.size() ; i++)
+		{
+		//neighbor hasn't been traversed to yes
+		if ( g.getVertexMark(adjacentVerticies[i])  == "UNEXPLORED")
+			{
+			//check minimun weight and overwrite if necessary
+			setMin( g, currentVertex , adjacentVerticies[i] , minVertex1 , minVertex2, min );
+				
+			//traverse to newly discovered adjacent vertex
+			g.setEdgeMark(currentVertex, adjacentVerticies[i] , "DISCOVERY");
+			DFShelper( g , adjacentVerticies[i] , minVertex1 ,  minVertex2 , min );
+			}
+			
+		else if (g.getVertexMark(adjacentVerticies[i])  == "VISITED" 
+					&& g.getEdgeMark(adjacentVerticies[i], currentVertex) != "DISCOVERY")
+			{
+			//just because adjacent vertex is a BACK/CROSS edge, doesn't mean that
+			//its weight shouldn't be checked
+			setMin( g, currentVertex , adjacentVerticies[i] , minVertex1 , minVertex2, min );
+			
+			//set cross, don't traverse
+			g.setEdgeMark( currentVertex, adjacentVerticies[i] , "CROSS" );
+			
+			}
+		}	
+}
+
+void setMin(Graph & g, string currentVertex , string adjacentVertex,
+  								 string & minVertex1 , string & minVertex2, int & min )
+{
+
+	int currentWeight = g.getEdgeWeight(currentVertex , adjacentVertex);
+	if (  currentWeight < min)
+		{
+		min =currentWeight;
+		minVertex1 = currentVertex;
+		minVertex2 = adjacentVertex;
+		}
+
+}

@@ -1,0 +1,87 @@
+/*
+    Lab 12: Minimum Path Test
+    Written by Sean Massung for CS 225 Spring 2011
+*/
+
+#include <iostream>
+#include <string>
+#include "graph.h"
+#include "minpath.h"
+#include "example_graphs.cpp"
+
+using std::string;
+using std::cerr;
+using std::cout;
+using std::endl;
+
+void error(){
+    cerr << "usage:"
+         << "\t./minpathtest\n"
+         << "\t./minpathtest <numVertices> <seed>\n"
+         << "\t./minpathtest <us> | <europe> | <japan>\n"
+         << "Check ./images/*.png for correct output\n"
+         << "Make sure you label the edges on the minimum path as \"MIN\"\n";
+    exit(1);
+}
+
+void mapGraph(char c){
+
+    Graph* g;
+    int n;
+        
+    switch(c){
+    case 'u':
+        g = new Graph(createUSMap(false));
+        n = minPath(*g, "KansasCity", "WashingtonDC");
+        g->printPNG("minpath-us");
+        g->print();
+        cout << "Minimum path from KansasCity to WashingtonDC: " << n << " edges.\n";
+        break;
+    case 'e':
+        g = new Graph(createEuropeMap(false));
+        n = minPath(*g, "London", "Prague");
+        g->printPNG("minpath-europe");
+        g->print();
+        cout << "Minimum path from London to Prague: " << n << " edges.\n";
+        break;
+    case 'j':
+        g = new Graph(createJapanMap(false));
+        n = minPath(*g, "Nagoya", "Hitachinaka");
+        g->printPNG("minpath-japan");
+        g->print();
+        cout << "Minimum path from Nagoya to Hitachinaka: " << n << " edges.\n";
+        break;
+    default:
+        error();
+    }
+
+    delete g;
+}
+
+void randomGraph(int numVertices, unsigned long seed){
+    Graph g(false, numVertices, seed);
+    string start = "0", end = g.toString(numVertices-1);
+    int n = minPath(g, start, end);
+    g.print();
+    g.printPNG("minpath-random");
+    cout << numVertices << " vertices with seed " << seed << endl
+         << "Minimum path from " << start << " to "
+         << end << ": " << n << ((n>1)?(" edges."):(" edge.")) << endl;
+}
+
+int main(int argc, char** argv){
+
+//    switch(argc){
+  //  case 2:
+        mapGraph(argv[1][0]);
+/*    
+        break;    
+    case 3:
+        randomGraph(atoi(argv[1]), atoi(argv[2]));
+        break;
+    default:
+        randomGraph(6, 46782);
+    }
+*/
+    return 0;
+}

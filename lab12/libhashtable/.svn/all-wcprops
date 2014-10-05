@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable
+END
+string_hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/string_hash.h
+END
+sciterator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/sciterator.cpp
+END
+hashtable.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/hashtable.h
+END
+schashtable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/schashtable.cpp
+END
+schashtable.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/schashtable.h
+END
+hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/hash.h
+END
+string_hash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sp11-cs225/!svn/ver/21023/levitas1/lab12/libhashtable/string_hash.cpp
+END

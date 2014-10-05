@@ -1,0 +1,78 @@
+<html>
+<head> <title>MP 4 Tests</title> </head>
+<body>
+<table border=2>
+    <tr>
+        <td> </td>
+        <td> <strong>Solution</strong> </td>
+        <td> <strong>Your Output</strong> </td>
+    </tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr>
+        <td> solidColorPicker </td>
+        <td> <img src="soln_solidColorPickerTest.bmp"> </td>
+        <td> <img src="solidColorPickerTest.bmp"> </td>
+    </tr>
+    <tr>
+        <td> gridColorPicker </td>
+        <td> <img src="soln_gridColorPickerTest.bmp"> </td>
+        <td> <img src="gridColorPickerTest.bmp"> </td>
+    </tr>
+    <tr>
+        <td> gradientColorPicker </td>
+        <td> <img src="soln_gradientColorPickerTest.bmp"> </td>
+        <td> <img src="gradientColorPickerTest.bmp"> </td>
+    </tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr>
+        <td> DFSfillSolid </td>
+        <td> <img src="soln_bfsSolidTest.gif"> </td>
+        <td> <img src="bfsSolidTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> BFSfillSolid </td>
+        <td> <img src="soln_bfsSolidTest.gif"> </td>
+        <td> <img src="bfsSolidTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> DFSfillGrid </td>
+        <td> <img src="soln_bfsGridTest.gif"> </td>
+        <td> <img src="bfsGridTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> BFSfillGrid </td>
+        <td> <img src="soln_bfsGridTest.gif"> </td>
+        <td> <img src="bfsGridTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> DFSfillGradient </td>
+        <td> <img src="soln_bfsGradientTest.gif"> </td>
+        <td> <img src="bfsGradientTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> BFSfillGradient </td>
+        <td> <img src="soln_bfsGradientTest.gif"> </td>
+        <td> <img src="bfsGradientTest.gif"> </td>
+    </tr>
+    <tr>
+        <td> Pac-Man DFS </td>
+        <td> <img src="soln_pacManDFS.bmp"> </td>
+        <td> <img src="pacManDFS.bmp"> </td>
+    </tr>
+    <tr>
+        <td> Pac-Man BFS </td>
+        <td> <img src="soln_pacManBFS.bmp"> </td>
+        <td> <img src="pacManBFS.bmp"> </td>
+    </tr>
+    <tr>
+        <td> Anti-Pac-Man DFS </td>
+        <td> <img src="soln_antiPacManDFS.gif"> </td>
+        <td> <img src="antiPacManDFS.gif"> </td>
+    </tr>
+    <tr>
+        <td> Anti-Pac-Man BFS </td>
+        <td> <img src="soln_antiPacManBFS.gif"> </td>
+        <td> <img src="antiPacManBFS.gif"> </td>
+    </tr>
+</table>
+</body>

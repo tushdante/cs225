@@ -1,0 +1,33 @@
+#include "EasyBMP.h"
+#include "image.h"
+
+#ifndef SCENE_H
+#define SCENE_H
+
+class Scene 
+{
+
+public:
+Scene (int max);
+~Scene();
+Scene(Scene const & source);
+Scene const & operator=(Scene const & source);
+void addpicture(const char* FileName, int index, int x, int y);
+void changemaxlayers(int newmax);
+void changelayer(int index, int newindex);
+void translate(int index, int xcoord, int ycoord);
+void deletepicture(int index);
+Image* getpicture (int index) const;
+Image drawscene() const;
+
+
+private:
+Image** imageArray;
+int Max;
+int* xcoordinate;
+int* ycoordinate;
+void copy(const Scene & copyScene);
+void clear();
+};
+
+#endif

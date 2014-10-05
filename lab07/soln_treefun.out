@@ -1,0 +1,104 @@
+================================================================
+Tree:
+height: 4
+ordered: false
+sumDistances: 22
+                              1                                  
+                      /               \                          
+              2                               5                  
+          /       \                       /                      
+      10              3               8                          
+                    /   \                                        
+                  6       4                                      
+                 / \                                             
+                7   9                                            
+
+printLeftRight: 10 2 7 6 9 3 4 1 8 5 
+Path: 1 2 10
+Path: 1 2 3 6 7
+Path: 1 2 3 6 9
+Path: 1 2 3 4
+Path: 1 5 8
+
+
+================================================================
+Mirrored:
+height: 4
+ordered: false
+sumDistances: 22
+                              1                                  
+                      /               \                          
+              5                               2                  
+                  \                       /       \              
+                      8               3               10         
+                                    /   \                        
+                                  4       6                      
+                                         / \                     
+                                        9   7                    
+
+printLeftRight: 5 8 1 4 3 9 6 7 2 10 
+Path: 1 5 8
+Path: 1 2 3 4
+Path: 1 2 3 6 9
+Path: 1 2 3 6 7
+Path: 1 2 10
+
+
+================================================================
+BST:
+height: 3
+ordered: true
+sumDistances: 19
+              6                  
+          /       \              
+      3               8          
+    /   \           /   \        
+  1       4       7       9      
+   \       \               \     
+    2       5               10   
+
+printLeftRight: 1 2 3 4 5 6 7 8 9 10 
+Path: 6 3 1 2
+Path: 6 3 4 5
+Path: 6 8 7
+Path: 6 8 9 10
+
+
+================================================================
+BST Mirrored:
+height: 3
+ordered: false
+sumDistances: 19
+              6                  
+          /       \              
+      8               3          
+    /   \           /   \        
+  9       7       4       1      
+ /               /       /       
+10              5       2        
+
+printLeftRight: 10 9 8 7 6 5 4 3 2 1 
+Path: 6 8 9 10
+Path: 6 8 7
+Path: 6 3 4 5
+Path: 6 3 1 2
+
+
+================================================================
+Almost BST:
+height: 3
+ordered: false
+sumDistances: 7
+              5                  
+          /       \              
+      3               8          
+                    /            
+                  6              
+                 /               
+                4                
+
+printLeftRight: 3 5 4 6 8 
+Path: 5 3
+Path: 5 8 6 4
+
+

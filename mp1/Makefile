@@ -1,0 +1,26 @@
+
+
+NAME_OF_EXECUTABLE_FILE = mp1
+
+
+COMPILER = g++
+COMPILER_OPTS = -c -g
+
+
+LINKER = g++
+LINKER_OPTS = -o $(NAME_OF_EXECUTABLE_FILE)
+
+OBJS = EasyBMP.o main.o
+
+
+$(NAME_OF_EXECUTABLE_FILE) : $(OBJS)
+	$(LINKER) $(LINKER_OPTS) $(OBJS)
+
+EasyBMP.o : EasyBMP.h EasyBMP.cpp
+	$(COMPILER) $(COMPILER_OPTS) EasyBMP.cpp
+
+main.o : main.cpp EasyBMP.h
+	$(COMPILER) $(COMPILER_OPTS) main.cpp
+
+clean:
+	-rm *.o $(NAME_OF_EXECUTABLE_FILE)

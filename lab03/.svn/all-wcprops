@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/sp11-cs225/!svn/ver/5289/levitas1/lab03
+END
+apartment.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/4721/levitas1/lab03/apartment.h
+END
+building.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/5715/levitas1/lab03/building.h
+END
+testinvalidread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sp11-cs225/!svn/ver/5715/levitas1/lab03/testinvalidread.cpp
+END
+testmemoryleak.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sp11-cs225/!svn/ver/5715/levitas1/lab03/testmemoryleak.cpp
+END
+testinvalidfree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sp11-cs225/!svn/ver/4721/levitas1/lab03/testinvalidfree.cpp
+END
+apartment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/4721/levitas1/lab03/apartment.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/5289/levitas1/lab03/Makefile
+END
+building.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/5715/levitas1/lab03/building.cpp
+END
+soln_testbuilding.out
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sp11-cs225/!svn/ver/4721/levitas1/lab03/soln_testbuilding.out
+END
+testbuilding.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/4721/levitas1/lab03/testbuilding.cpp
+END

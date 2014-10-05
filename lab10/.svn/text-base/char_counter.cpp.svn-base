@@ -1,0 +1,38 @@
+/*
+   Letter Counter (Lab 10)
+   Created by Chase Geigle for CS225, Spring 2011
+*/
+#include "char_counter.h"
+
+CharFreq::CharFreq( string ifile ) : filename( ifile ) {
+    /* nothing */
+}
+
+vector< pair<char, int> > CharFreq::getChars( int threshold ) {
+    TextFile infile( filename );
+    LetterHash hasher;
+
+
+
+
+
+    SCHashTable<char, int> hashTable(256, hasher);
+    while( infile.good() ) {
+        string word = infile.getNextWord();
+        for( int i = 0; i < word.length(); i++ ) {
+            int val = 0;
+            if( hashTable.keyExists( word[i] ) )
+                val = hashTable.find( word[i] ); 
+            hashTable.remove( word[i] );
+            hashTable.insert( word[i], val + 1 );
+        }
+    }
+    vector< pair<char, int> > vect = hashTable.vectorize();
+    vector< pair<char, int> > ret;
+    for( unsigned int i = 0; i < vect.size(); i++ ) {
+        if( vect[i].second >= threshold )
+            ret.push_back( vect[i] );
+    }
+    return ret;
+}
+

@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10
+END
+hashtable.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/hashtable.h
+END
+logfile_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/logfile_parser.h
+END
+letter_hash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/letter_hash.cpp
+END
+anagram_finder.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/anagram_finder.h
+END
+anagramtest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/anagramtest.cpp
+END
+letter_hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/letter_hash.h
+END
+string_hash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/string_hash.cpp
+END
+word_counter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/19308/levitas1/lab10/word_counter.cpp
+END
+char_counter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/19173/levitas1/lab10/char_counter.cpp
+END
+string_hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/string_hash.h
+END
+word_counter.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/word_counter.h
+END
+char_counter.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/char_counter.h
+END
+schashtable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/19154/levitas1/lab10/schashtable.cpp
+END
+textfile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/textfile.cpp
+END
+wordcount.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/19383/levitas1/lab10/wordcount.cpp
+END
+charcount.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/charcount.cpp
+END
+schashtable.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/schashtable.h
+END
+lphashtable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sp11-cs225/!svn/ver/19154/levitas1/lab10/lphashtable.cpp
+END
+logfile_generator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/logfile_generator.cpp
+END
+hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/hash.h
+END
+textfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/textfile.h
+END
+lfparse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/lfparse.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/Makefile
+END
+lphashtable.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/17866/levitas1/lab10/lphashtable.h
+END
+logfile_parser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sp11-cs225/!svn/ver/19435/levitas1/lab10/logfile_parser.cpp
+END
+anagram_finder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sp11-cs225/!svn/ver/19413/levitas1/lab10/anagram_finder.cpp
+END

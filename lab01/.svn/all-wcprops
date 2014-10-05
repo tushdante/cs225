@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/sp11-cs225/!svn/ver/1513/levitas1/lab01
+END
+EasyBMP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/EasyBMP.cpp
+END
+EasyBMP_DataStructures.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/EasyBMP_DataStructures.h
+END
+EasyBMP_BMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/EasyBMP_BMP.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/1513/levitas1/lab01/main.cpp
+END
+EasyBMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/EasyBMP.h
+END
+cs225setup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/1513/levitas1/lab01/cs225setup.sh
+END
+EasyBMP_VariousBMPutilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/EasyBMP_VariousBMPutilities.h
+END
+merge.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/merge.bmp
+END
+back.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/back.bmp
+END
+overlay.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/835/levitas1/lab01/overlay.bmp
+END

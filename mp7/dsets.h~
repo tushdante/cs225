@@ -1,0 +1,27 @@
+#ifndef __DSETS_H__
+#define __DSETS_H__
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class DisjointSets
+{
+
+private:
+vector<int> VectorSet;
+
+
+public:
+void addelements (int n);
+int find(int i);
+void setunion (int A , int B);
+void clear();
+
+};
+
+
+
+#endif

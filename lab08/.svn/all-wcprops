@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08
+END
+coloredout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/coloredout.cpp
+END
+bst_given.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/bst_given.cpp
+END
+coloredout.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/coloredout.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/main.cpp
+END
+seed.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/seed.h
+END
+bst.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/bst.cpp
+END
+gnuplot.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/gnuplot.cpp
+END
+soln_testbst.out
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/soln_testbst.out
+END
+testBST.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/testBST.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/Makefile
+END
+seed.o
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/seed.o
+END
+bst.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/bst.h
+END
+gnuplot.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sp11-cs225/!svn/ver/14373/levitas1/lab08/gnuplot.h
+END
